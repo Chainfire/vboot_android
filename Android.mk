@@ -10,7 +10,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE := libvboot_util-host
 
 ifeq ($(HOST_OS),darwin)
-LOCAL_CFLAGS += -DHAVE_MACOS
+LOCAL_CFLAGS += -DHAVE_MACOS -DO_LARGEFILE=0
 endif
 
 # These are required to access large disks and files on 32-bit systems.
